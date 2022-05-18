@@ -51,14 +51,7 @@ public static class RailFenceCipher
         {
             for (var i = 0; i < array.Count; i++)
             {
-                if (index == i)
-                {
-                    array[i] += "±";
-                }
-                else
-                {
-                    array[i] += "§";
-                }
+                array[i] += index == i ? '±' : '§';
             }
 
             index += hasBottomed ? -1 : 1;
